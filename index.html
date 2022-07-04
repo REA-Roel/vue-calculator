@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue - Calculator</title>
+    <style rel="text/stylesheet">
+      body > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(5, 40px);
+        justify-items: stretch;
+      }
+      div > span {
+        grid-column: span 3;
+        place-self: center;
+      }
+      div > span:last-of-type{
+        grid-row: 1;
+      }
+      body > div > button:last-of-type{
+        grid-column: span 3;
+        place-self: stretch;
+      }
+      span + div {
+        grid-row: span 5;
+        display: grid;
+        grid-template-rows: repeat(5, 40px);
+      }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <span>{{display}}</span>
+        <div>
+          <button>÷</button>
+          <button>x</button>
+          <button>-</button>
+          <button>+</button>
+          <button @click="calculate">=</button>
+        </div>
+        <button>9</button>
+        <button>8</button>
+        <button>7</button>
+        <button>6</button>
+        <button>5</button>
+        <button>4</button>
+        <button>3</button>
+        <button>2</button>
+        <button>1</button>
+        <button>0</button>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+          data(){
+            return {}
+          },
+          computed: {},
+          methods: {},
+        })
+        app.mount('#calculator')
+    </script>
+</body>
+</html>
