@@ -1,0 +1,1 @@
+#app>div{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:repeat(5,40px);justify-items:stretch}div>span{grid-column:span 3;place-self:center}div>span:last-of-type{grid-row:1}#app>div>button:last-of-type{grid-column:span 3;place-self:stretch}span+div{grid-row:span 5;display:grid;grid-template-rows:repeat(5,40px)}
